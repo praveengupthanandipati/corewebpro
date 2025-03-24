@@ -1,13 +1,11 @@
 @use "sass:map";
 @use "variables" as v;
 //Mixin for Transition
-@mixin transition($property: all, $duration: 0.3s, $function: ease) {
-  $transition: $property $duration $function;
-  transition: $transition;
-  -moz-transition: $transition;
-  -webkit-transition: $transition;
-  -ms-transition: $transition;
-  -o-transition: $transition;
+@mixin transition($property: all, $duration: 0.3s, $timing: ease) {
+  transition: $property $duration $timing;
+  @supports not (transition: $property $duration $timing) {
+    -webkit-transition: $property $duration $timing;
+  }
 }
 
 /**
@@ -60,31 +58,6 @@ Usage Transition
 } 
 **/
 
-//button mixin
-@mixin button(
-  $bg-color: $primary-color,
-  $text-color: $text-color,
-  $padding: 10px 20px,
-  $border-radius: 5px,
-  $border: none
-) {
-  background-color: $bg-color;
-  color: $text-color;
-  padding: $padding;
-  border-radius: $border-radius;
-  border: $border;
-
-  &:hover {
-    background-color: darken($bg-color, 10%);
-  }
-}
-
-/**
-.btn-primary {
-  @include button(#007bff, #fff);
-}
-**/
-
 //Mixin for shadow
 @mixin shadow($top, $left, $blur, $color, $opacity) {
   $box-shadow: $top $left $blur $color $opacity;
@@ -110,7 +83,6 @@ Usage Transition
   margin: 0;
   padding: 0;
   font-family: "DM Sans", sans-serif;
-  font-size: v.$fsize;
 }
 
 //Mixin for Responsive Breakpoints

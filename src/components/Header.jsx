@@ -101,8 +101,8 @@ const Header = () => {
                   </li>
                 </ul>
                 <ul className="navbar-nav justify-content-end flex-grow-1">
-                  <li className="nav-item">
-                    <Link className="nav-link text-white" to="">
+                  <li>
+                    <Link className="navbarBtn-blue text-white" to="">
                       Let us Talk
                     </Link>
                   </li>

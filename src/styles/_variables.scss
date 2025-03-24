@@ -3,8 +3,9 @@ $fsize: 16px;
 
 //variables colors
 //Define the color variables
-$primary-color: #fbaa19;
-$secondary-color: #0126ff;
+$primary-color: #fbaa19 !default;
+$secondary-color: #0126ff !default;
+$darkSecondary-color: #0021db !default;
 $text-color: #fff;
 $label-color: #999999;
 $black-color: #000;
@@ -14,6 +15,7 @@ $black-color: #000;
 $colors: (
   "primary": $primary-color,
   "secondary": $secondary-color,
+  "darkSecondary": $darkSecondary-color,
   "text": $text-color,
   "label": $label-color,
   "black": $black-color,

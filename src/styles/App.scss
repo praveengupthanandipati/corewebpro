@@ -1,6 +1,7 @@
 @use "sass:map";
 @use "variables" as v;
 @use "mixins" as m;
+@use "header";
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
 body {
@@ -8,30 +9,19 @@ body {
   color: map.get(v.$colors, text);
 }
 
-header {
-  .active {
-    color: map.get(v.$colors, primary) !important;
-  }
-  .nav-item {
-    .nav-link {
-      padding: 5px 15px !important;
+a {
+  text-decoration: none;
+}
 
-      &:hover {
-        color: map.get(v.$colors, primary) !important;
-      }
-    }
-  }
-  .navbar-brand {
-    img {
-      width: 100px;
-    }
-  }
-  .dropdown-item {
-    padding: 10px 25px;
+.navbarBtn-blue {
+  background: map.get(v.$colors, secondary);
+  display: block;
+  padding: 12px 30px;
+  border-radius: 2px;
+  // @include transition(all, 0.2s, ease);
 
-    &:hover {
-      background: map.get(v.$colors, primary);
-    }
+  &:hover {
+    background: darken(map.get(v.$colors, secondary), 10%);
   }
 }
 
