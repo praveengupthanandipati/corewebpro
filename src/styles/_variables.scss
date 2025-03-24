@@ -1,0 +1,80 @@
+@use "sass:map"; //Other variables
+$fsize: 16px;
+
+//variables colors
+//Define the color variables
+$primary-color: #fbaa19;
+$secondary-color: #0126ff;
+$text-color: #fff;
+$label-color: #999999;
+$black-color: #000;
+
+//defie a color map
+
+$colors: (
+  "primary": $primary-color,
+  "secondary": $secondary-color,
+  "text": $text-color,
+  "label": $label-color,
+  "black": $black-color,
+);
+
+//loop colours
+@each $color-name, $color-value in $colors {
+  .bg-#{$color-name} {
+    background-color: $color-value;
+  }
+  .text-#{$color-name} {
+    color: $color-value;
+  }
+  .border-#{$color-name} {
+    border: 1px solid $color-value;
+  }
+}
+
+//examples using
+/**
+<div className="bg-primary text-white p-3"></div>
+<div className="border-white p-3"></div>
+**/
+
+//Define the font variables
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+//Font Weights Map
+$font-weights: (
+  "light": $font-weight-light,
+  "regular": $font-weight-regular,
+  "medium": $font-weight-medium,
+  "semibold": $font-weight-semibold,
+  "bold": $font-weight-bold,
+);
+
+//Loop $weight-name, $weight-value in $font-weights
+@each $weight-name, $weight-value in $font-weights {
+  .font-#{$weight-name} {
+    font-weight: $weight-value;
+  }
+}
+//<p className="font-light">This text has a light font weight.</p>
+
+//device breakpoints
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+$breakpoints: (
+  "xs": $xs,
+  "sm": $sm,
+  "md": $md,
+  "lg": $lg,
+  "xl": $xl,
+  "xxl": $xxl,
+);

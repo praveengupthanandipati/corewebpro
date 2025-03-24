@@ -1,0 +1,55 @@
+@use "sass:map";
+@use "variables" as v;
+@use "mixins" as m;
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+body {
+  @include m.siteMain;
+  color: map.get(v.$colors, text);
+}
+
+header {
+  .active {
+    color: map.get(v.$colors, primary) !important;
+  }
+  .nav-item {
+    .nav-link {
+      padding: 5px 15px !important;
+
+      &:hover {
+        color: map.get(v.$colors, primary) !important;
+      }
+    }
+  }
+  .navbar-brand {
+    img {
+      width: 100px;
+    }
+  }
+  .dropdown-item {
+    padding: 10px 25px;
+
+    &:hover {
+      background: map.get(v.$colors, primary);
+    }
+  }
+}
+
+.video-background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+}
