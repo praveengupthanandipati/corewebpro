@@ -4,14 +4,14 @@
 
 header {
   .active {
-    color: map.get(v.$colors, primary) !important;
+    color: map.get(v.$colors, primary-color) !important;
   }
   .nav-item {
     .nav-link {
-      padding: 5px 15px !important;
+      padding: 12px 15px !important;
 
       &:hover {
-        color: map.get(v.$colors, primary) !important;
+        color: map.get(v.$colors, primary-color) !important;
       }
     }
   }
@@ -24,7 +24,7 @@ header {
     padding: 10px 25px;
 
     &:hover {
-      background: map.get(v.$colors, primary);
+      background: map.get(v.$colors, primary-color);
     }
   }
 }

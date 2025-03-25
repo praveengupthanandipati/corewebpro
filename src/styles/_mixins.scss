@@ -134,16 +134,21 @@ sidebar {
 **/
 
 //mixin for gradient
-@mixin gradient($direction: to bottom, $color1: #000, $color2: #fff) {
-  background: linear-gradient($direction, $color1, $color2);
-  -webkit-background: linear-gradient($direction, $color1, $color2);
-  -ms-background: linear-gradient($direction, $color1, $color2);
-  -o-background: linear-gradient($direction, $color1, $color2);
-  -moz-background: linear-gradient($direction, $color1, $color2);
+@mixin gradient($direction: 180deg, $color-stops...) {
+  background: linear-gradient($direction, $color-stops);
+
+  // Vendor prefixes (optional)
+  @each $prefix in -webkit-, -moz-, -ms-, -o- {
+    background: #{$prefix}linear-gradient($direction, $color-stops);
+  }
 }
 
 /**Usage
 .element {
-  @include gradient(to right, #ff7e5f, #feb47b);
+  @include gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    #000 72.28%
+  );
 }
 **/
