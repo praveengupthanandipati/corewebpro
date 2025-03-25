@@ -137,6 +137,8 @@ sidebar {
 @mixin gradient($direction: 180deg, $color-stops...) {
   background: linear-gradient($direction, $color-stops);
 
+  //... is number of arguments for that parameters
+
   // Vendor prefixes (optional)
   @each $prefix in -webkit-, -moz-, -ms-, -o- {
     background: #{$prefix}linear-gradient($direction, $color-stops);
