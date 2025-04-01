@@ -1,6 +1,8 @@
 import React from "react";
 import videoSrc from "../assets/videos/video.mp4";
 import HomeAboutColumns from "../components/HomeAboutColumns";
+import HomeServices from "../components/HomeServices";
+import SectionTitle from "../components/SectionTitle";
 
 const Home = () => {
   const bannerTitle = "Crafting Digital Experiences That Inspire Growth";
@@ -25,9 +27,21 @@ const Home = () => {
 
         <section className="aboutHome">
           <div className="container">
-            <h2 className="text-text-color font-bold">{aboutTitle}</h2>
+            <h2 className="text-text-color font-semibold">{aboutTitle}</h2>
             <HomeAboutColumns />
           </div>
+        </section>
+
+        <section className="servicesHome position-relative">
+            <div className="blurFilter"></div>
+            <div className="container">
+                <SectionTitle 
+                    title="Our Offering Services"
+                    description="We build cutting-edge AI solutions that propel your business, surpass your competition, and captivate your users."
+                />
+                <HomeServices/>
+            </div>
+            
         </section>
       </main>
     </>
