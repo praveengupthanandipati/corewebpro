@@ -3,6 +3,7 @@ import videoSrc from "../assets/videos/video.mp4";
 import HomeAboutColumns from "../components/HomeAboutColumns";
 import HomeServices from "../components/HomeServices";
 import SectionTitle from "../components/SectionTitle";
+import HomeWorksSwiper from "../components/HomeWorksSwiper";
 
 const Home = () => {
   const bannerTitle = "Crafting Digital Experiences That Inspire Growth";
@@ -40,8 +41,33 @@ const Home = () => {
                     description="We build cutting-edge AI solutions that propel your business, surpass your competition, and captivate your users."
                 />
                 <HomeServices/>
+            </div>            
+        </section>
+
+        <section className="worksHome position-relative">
+            <div className="blurFilter"></div>
+            <div className="container">
+                <SectionTitle 
+                    title="Discover Our Recent Work"
+                    description=" Innovative Projects and Success Stories That Showcase Our Expertise"
+                />    
+                 <div className="text-center">
+                    <a className="btn-blue text-white bg-sec d-inline-block mt-3" href="#">
+                        <span className="text-uppercase">View All works</span>
+                    </a>  
+                  </div>                     
+                  <HomeWorksSwiper/>                        
             </div>
-            
+        </section>
+
+        <section className="whyChooseUs position-relative">
+          <div className="blurFilter"></div>
+          <div className="container">
+            <SectionTitle 
+                  title="Why Choose Us"
+                  description=" Cutting-edge AI expertise with deep industry focus on sports, media, and entertainment"
+              />   
+          </div>
         </section>
       </main>
     </>

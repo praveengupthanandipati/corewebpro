@@ -40,7 +40,7 @@ const HomeAboutColumns = () => {
     <div>
       <div className="row">
         {aboutColumnsData.map((column) => (
-          <div key={column.id} className="col-md-3 text-center aboutcol">
+          <div key={column.id} className="col-sm-6 col-lg-3 text-center aboutcol">
             <img src={column.icon} alt={column.title} />
             <article className="text-text-color p-3">
               <h4>{column.title}</h4>
