@@ -215,4 +215,30 @@ main {
 .whyChooseUs{
   overflow: hidden;
   padding:100px 0;
+
+  .swiper-wrapper{
+    margin:50px 0;
+
+    .swiper-slide{
+      img{
+        filter: grayscale(250);
+      }
+    }    
+  }
+
+  .swiper-pagination{
+    display: none;
+  }
+  .testimonial{
+    border:1px solid #666;
+    article{
+      margin-bottom:75px;
+      min-height: 100px;
+    }
+  }
+}
+
+.newsSection{
+  overflow: hidden;
+  padding:100px 0;
 }
