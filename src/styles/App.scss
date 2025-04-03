@@ -268,6 +268,32 @@ footer{
   position:relative;
   margin-top:4rem;
 
+  .moveTop{
+    position: fixed;    
+    background:map.get(v.$colors, secondary-color);
+    width:50px;
+    height: 50px;
+    border-radius:50%;
+    text-align: center;
+    line-height: 45px;
+    right:25px;
+    bottom:25px;   
+    z-index: 100;
+    @include m.transition(all, 0.5s, ease);
+    
+    
+
+    i{
+      font-size:25px;
+      color:map.get(v.$colors, text-color);
+    }
+
+    &:hover{
+      background:map.get(v.$colors, primary-color);
+      transform:translateY(-5px);
+    }
+  }
+
   .nav{
     .nav-link{
       color:map.get(v.$colors, text-color);
@@ -305,7 +331,8 @@ footer{
       display: inline-block;
       text-align: center;
       border-radius:50%;
-      line-height: 46px;
+      line-height: 48px;
+      margin-right:10px;
 
       i{
         font-size:25px;
