@@ -241,4 +241,18 @@ main {
 .newsSection{
   overflow: hidden;
   padding:100px 0;
+
+  .blogItem{
+    img{
+      margin-bottom:5px;
+    }
+    small{
+      color:map.get(v.$colors, label-color);
+    }
+    h4{
+      color:map.get(v.$colors, text-color);
+      font-size:18px;
+      line-height: 170%;
+    }
+  }
 }

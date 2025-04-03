@@ -5,6 +5,7 @@ import HomeServices from "../components/HomeServices";
 import SectionTitle from "../components/SectionTitle";
 import HomeWorksSwiper from "../components/HomeWorksSwiper";
 import WhychooseSlider from "../components/WhychooseSlider";
+import BlogItems from "../components/BlogItems";
 import testimonial01 from "../assets/images/team01.png";
 import testimonial02 from "../assets/images/team02.png";
 import testimonial03 from "../assets/images/team03.png";
@@ -133,6 +134,13 @@ const Home = () => {
                     title="News & Updates"
                     description=" News, Trends, and Updates from Core Web Pro – Your Creative Digital Partner"
                 />   
+                <div className="text-center">
+                    <a className="btn-blue text-white bg-sec d-inline-block mt-3" href="#">
+                        <span className="text-uppercase">View All works</span>
+                    </a>  
+                  </div>   
+                <BlogItems/>
+                 
               </div>
         </section>
       </main>
