@@ -9,6 +9,7 @@ header {
   .nav-item {
     .nav-link {
       padding: 12px 15px !important;
+      color:map.get(v.$colors, text-color);
 
       &:hover {
         color: map.get(v.$colors, primary-color) !important;
@@ -26,5 +27,9 @@ header {
     &:hover {
       background: map.get(v.$colors, primary-color);
     }
+  }
+  .dropdown-item.active{
+    background: map.get(v.$colors, primary-color);
+    color:map.get(v.$colors, black-color)!important;
   }
 }

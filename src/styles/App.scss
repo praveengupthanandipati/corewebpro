@@ -3,6 +3,7 @@
 @use "mixins" as m;
 @use "variables" as v;
 @use "header";
+@use "Footer";
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
 body {
@@ -262,82 +263,25 @@ main {
   }
 }
 
-footer{
-  padding:10rem 0;
-  overflow: hidden;
-  position:relative;
-  margin-top:4rem;
+.subPage{
+  min-height: 500px;
 
-  .moveTop{
-    position: fixed;    
-    background:map.get(v.$colors, secondary-color);
-    width:50px;
-    height: 50px;
-    border-radius:50%;
-    text-align: center;
-    line-height: 45px;
-    right:25px;
-    bottom:25px;   
-    z-index: 100;
-    @include m.transition(all, 0.5s, ease);
-    
-    
+  .subpageHeader{
+     padding-top:150px;
 
-    i{
-      font-size:25px;
-      color:map.get(v.$colors, text-color);
-    }
-
-    &:hover{
-      background:map.get(v.$colors, primary-color);
-      transform:translateY(-5px);
-    }
+     h1{
+      font-size:clamp(2rem, 4vw, 4rem);
+     }
   }
+}
 
-  .nav{
-    .nav-link{
-      color:map.get(v.$colors, text-color);
-      font-size:14px;
+.subpageMain{
+  min-height: 500px;
+  padding:5rem 0;
+  color:map.get(v.$colors, text-color);
 
-      &:hover{
-        text-decoration: underline;
-      }
-    }    
-  }
-  a{
-    font-size:14px;
-
-    &:hover{
-      text-decoration: underline;
-    }
-  }
-
-  .divider{
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(193, 193, 193, 0.12) 50.5%, rgba(255, 255, 255, 0) 100%);
-    width: 874px;
-  height: 1px;
-  }
-  .contactDetails{
-    a{
-      padding-right:50px;
-      display: inline-block;
-    }
-  }
-  .socialFooter{
-    a{
-      width:45px;
-      height: 45px;
-      background:map.get(v.$colors, text-color);           
-      display: inline-block;
-      text-align: center;
-      border-radius:50%;
-      line-height: 48px;
-      margin-right:10px;
-
-      i{
-        font-size:25px;
-        color:map.get(v.$colors, primary-color );
-      }
-    }
+  h2{
+    font-size:clamp(1.5rem, 2.8vw, 2.8rem);
+    font-weight: map.get(v.$font-weights, regular);
   }
 }

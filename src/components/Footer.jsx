@@ -17,6 +17,7 @@ const Footer = () => {
       if (window.pageYOffset > 200) {
         setIsVisible(true);
       } else {
+
         setIsVisible(false);
       }
     };
@@ -28,7 +29,7 @@ const Footer = () => {
     };
   }, []);
 
-  
+
   return (
     <footer>
       {isVisible && (
@@ -42,10 +43,10 @@ const Footer = () => {
 
                     <ul className="nav justify-content-center py-5">
                         <li className="nav-item">
-                          <Link className="nav-link">Home</Link>
+                          <Link to="/" className="nav-link">Home</Link>
                         </li>
                         <li className="nav-item">
-                          <Link className="nav-link">About</Link>
+                          <Link to="/About" className="nav-link">About</Link>
                         </li>
                         <li className="nav-item">
                           <Link className="nav-link">Works</Link>

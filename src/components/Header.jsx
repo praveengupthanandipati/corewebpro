@@ -1,8 +1,21 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Logo from "../assets/images/logo.svg";
 
 const Header = () => {
+
+  const location = useLocation();
+
+  //helper function to check if path is active
+
+  const isActive = (path)=>{
+    return location.pathname === path ? "active" : "";
+  }
+
+  //for Dropdown parent items
+  const isDropdownActive = (paths)=>{
+    return paths.includes(location.pathname) ? "active" :"";
+  }
   return (
     <header className="fixed-top bg-black">
       <div className="container">
@@ -42,16 +55,23 @@ const Header = () => {
             <div className="offcanvas-body">
               <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li className="nav-item">
-                  <Link className="nav-link active" aria-current="page" to="/">
+                  <Link to="/" className={`nav-link ${isActive("/")}`}
+                  aria-current={isActive("/") ? "page" : undefined}>
                     Home
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link text-white" to="/">
+                  <Link to="/About" className={`nav-link ${isActive("/About")}`} >
                     About
                   </Link>
                 </li>
-                <li className="nav-item dropdown">
+                <li className={`nav-item dropdown ${isDropdownActive([
+                  "/services/ux-ui",
+                  "/services/web-dev",
+                  "/services/mobile-dev",
+                  "/services/digital-marketing"
+
+                ])}`}>
                   <Link
                     className="nav-link dropdown-toggle text-white"
                     to="/"
@@ -59,38 +79,38 @@ const Header = () => {
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    popular Services
+                    Services
                   </Link>
                   <ul className="dropdown-menu">
                     <li>
-                      <Link className="dropdown-item" to="">
+                      <Link className={`dropdown-item ${isActive("/services/ux-ui")}`} to="/services/ux-ui">
                         UX/UI Designs
                       </Link>
                     </li>
                     <li>
-                      <Link className="dropdown-item" to="">
+                    <Link className={`dropdown-item ${isActive("/services/web-dev")}`} to="/services/web-dev">
                         Web Development
                       </Link>
                     </li>
                     <li>
-                      <Link className="dropdown-item" to="">
+                    <Link className={`dropdown-item ${isActive("/services/mobile-dev")}`} to="/services/mobile-dev">
                         Mobile Development
                       </Link>
                     </li>
                     <li>
-                      <Link className="dropdown-item" to="">
+                    <Link className={`dropdown-item ${isActive("/services/digital-marketing")}`} to="/services/digital-marketing">
                         Digital Marketing
                       </Link>
                     </li>
                   </ul>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link text-white" to="">
+                  <Link className={`nav-link ${isActive("/works")}`} to="/works">
                     Works
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link text-white" to="">
+                  <Link className={`nav-link ${isActive("/blog")}`} to="">
                     Blog
                   </Link>
                 </li>
