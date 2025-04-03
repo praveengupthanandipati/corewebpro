@@ -48,8 +48,6 @@ const Home = () => {
         <video autoPlay loop muted playsInLine>
           <source src={videoSrc} type="video/mp4" />
         </video>
-      </section>
-      <main>
         <section className="homeMain-title">
           <div className="container">
             <h1 className="text-text-color font-bold">{bannerTitle}</h1>
@@ -58,6 +56,9 @@ const Home = () => {
             </a>
           </div>
         </section>
+      </section>
+      <main>
+       
 
         <section className="aboutHome">
           <div className="container">
@@ -139,8 +140,7 @@ const Home = () => {
                         <span className="text-uppercase">View All works</span>
                     </a>  
                   </div>   
-                <BlogItems/>
-                 
+                <BlogItems/>                 
               </div>
         </section>
       </main>

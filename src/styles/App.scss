@@ -61,13 +61,26 @@ body {
     z-index: -1;
     @include m.translate(-50%, -50%);
   }
+  
+.homeMain-title {
+  // @include m.gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 72.28%);
+  padding: 50px 0 0 0;
+  position: absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  h1 {
+    font-size: clamp(2rem, 6vw, 6rem);
+  }
+}
 }
 
 main {
   position: relative;
   z-index: 1;
-  top: -450px;
-  padding-top: 6rem;
+  // top: -450px;
+  // padding-top: 6rem;
 
   .section-title{
     h3{
@@ -107,17 +120,9 @@ main {
 
 
 
-.homeMain-title {
-  // @include m.gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1));
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 72.28%);
-  padding: 50px 0 150px 0;
-  h1 {
-    font-size: clamp(2rem, 6vw, 6rem);
-  }
-}
 
 .aboutHome {
-  padding-bottom:10rem;
+  padding:10rem 0;
   h2 {
     font-size: clamp(1.5rem, 2.3vw, 2.3rem);
     padding-bottom: 68px;
@@ -253,6 +258,59 @@ main {
       color:map.get(v.$colors, text-color);
       font-size:18px;
       line-height: 170%;
+    }
+  }
+}
+
+footer{
+  padding:10rem 0;
+  overflow: hidden;
+  position:relative;
+  margin-top:4rem;
+
+  .nav{
+    .nav-link{
+      color:map.get(v.$colors, text-color);
+      font-size:14px;
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }    
+  }
+  a{
+    font-size:14px;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  .divider{
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(193, 193, 193, 0.12) 50.5%, rgba(255, 255, 255, 0) 100%);
+    width: 874px;
+  height: 1px;
+  }
+  .contactDetails{
+    a{
+      padding-right:50px;
+      display: inline-block;
+    }
+  }
+  .socialFooter{
+    a{
+      width:45px;
+      height: 45px;
+      background:map.get(v.$colors, text-color);           
+      display: inline-block;
+      text-align: center;
+      border-radius:50%;
+      line-height: 46px;
+
+      i{
+        font-size:25px;
+        color:map.get(v.$colors, primary-color );
+      }
     }
   }
 }
