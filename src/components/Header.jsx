@@ -66,7 +66,7 @@ const Header = () => {
                   </Link>
                 </li>
                 <li className={`nav-item dropdown ${isDropdownActive([
-                  "/services/ux-ui",
+                  "/services/UIUXDesign",
                   "/services/web-dev",
                   "/services/mobile-dev",
                   "/services/digital-marketing"
@@ -83,34 +83,34 @@ const Header = () => {
                   </Link>
                   <ul className="dropdown-menu">
                     <li>
-                      <Link className={`dropdown-item ${isActive("/services/ux-ui")}`} to="/services/ux-ui">
+                      <Link className={`dropdown-item ${isActive("/services/UIUXDesign")}`} to="/services/UIUXDesign">
                         UX/UI Designs
                       </Link>
                     </li>
                     <li>
-                    <Link className={`dropdown-item ${isActive("/services/web-dev")}`} to="/services/web-dev">
+                    <Link className={`dropdown-item ${isActive("/services/WebDevelopment")}`} to="/services/WebDevelopment">
                         Web Development
                       </Link>
                     </li>
                     <li>
-                    <Link className={`dropdown-item ${isActive("/services/mobile-dev")}`} to="/services/mobile-dev">
+                    <Link className={`dropdown-item ${isActive("/services/MobileDevelopment")}`} to="/services/MobileDevelopment">
                         Mobile Development
                       </Link>
                     </li>
                     <li>
-                    <Link className={`dropdown-item ${isActive("/services/digital-marketing")}`} to="/services/digital-marketing">
+                    <Link className={`dropdown-item ${isActive("/services/DigitalMarketing")}`} to="/services/DigitalMarketing">
                         Digital Marketing
                       </Link>
                     </li>
                   </ul>
                 </li>
                 <li className="nav-item">
-                  <Link className={`nav-link ${isActive("/works")}`} to="/works">
+                  <Link to="/Works" className={`nav-link ${isActive("/Works")}`} >
                     Works
                   </Link>
-                </li>
+                </li>                
                 <li className="nav-item">
-                  <Link className={`nav-link ${isActive("/blog")}`} to="">
+                  <Link to="/Blog" className={`nav-link ${isActive("/Blog")}`} >
                     Blog
                   </Link>
                 </li>
