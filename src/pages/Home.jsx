@@ -57,9 +57,8 @@ const Home = () => {
           </div>
         </section>
       </section>
-      <main>
-       
 
+      <main>   
         <section className="aboutHome">
           <div className="container">
             <h2 className="text-text-color font-semibold">{aboutTitle}</h2>

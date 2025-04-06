@@ -278,10 +278,32 @@ main {
 .subpageMain{
   min-height: 500px;
   padding:5rem 0;
-  color:map.get(v.$colors, text-color);
+  color:color.scale(map.get(v.$colors, black-color), $lightness: 90%);
+
+  p{
+    margin:0;
+  }
+  h2, h3, h4, h5, h6{
+    color:map.get(v.$colors, text-color);
+  }
 
   h2{
     font-size:clamp(1.5rem, 2.8vw, 2.8rem);
     font-weight: map.get(v.$font-weights, regular);
+  }
+  h3{
+    font-size:clamp(1.2rem, 2.2vw, 2.2rem);
+    margin-bottom:20px;
+  }
+}
+
+.maincolumns{
+  background: color.scale(map.get(v.$colors, black-color), $lightness: 3%);
+  padding:5rem 0;
+
+  .maincolumn-col{
+    border:1px dashed map.get(v.$colors, label-color);
+
+   
   }
 }
