@@ -21,6 +21,39 @@ const About = () => {
       desc: "To become a prime performer, in providing quality Web, Print and Software solutions in the competitive global market place. We aspire to be the world’s best IT Solutions Partner, through technology leadership, innovation and a world class work force.",
     },
   ];
+
+  const innovations = [
+    {
+      icon:"asterisk",
+      title: "Accountability",
+      desc: "We are committed to accountability and transparency, and we believe in building trust with our clients by sharing the results of our work.",
+    },
+    {
+      icon:"asterisk",
+      title: "Transparency",
+      desc: "Your data is a valuable asset. We will always make it available and crystal-clear.",
+    },
+    {
+      icon:"asterisk",
+      title: "Quality",
+      desc: "You need more than superficial results. We will create a direct path from your customers to you.",
+    },
+    {
+      icon:"asterisk",
+      title: "Dedication",
+      desc: "Your website is a powerful business tool. We will turn it into a long-term sales machine.",
+    },
+    {
+      icon:"asterisk",
+      title: "Growth",
+      desc: "You want to achieve your goals this year. We will devise a digital program to get you there.",
+    },
+    {
+      icon:"asterisk",
+      title: "Commitment",
+      desc: "You’re in it for the long haul with your business. We will be, too.",
+    },
+  ];
   return (
     <section className="subPage">
       <SubpageHeader
@@ -58,6 +91,31 @@ const About = () => {
             </div>
           </div>
         </section>
+
+        <section className="BusinessGoals">
+          <div className="container">
+              <h3 className="pb-2 pb-lg-5">
+                The digital partner you need, the results you deserve. This is our Core innovations:
+              </h3>
+
+              <div class="row">
+                {innovations.map((innoItem)=>(
+                <div class="col-md-4">
+                    <div class="innoCol">
+                      <i className={`bi bi-${innoItem.icon}`}></i>
+                      <article>
+                          <h4>{innoItem.title}</h4>
+                          <p>{innoItem.desc}</p>
+                      </article>
+                    </div>
+                </div>
+                ))}
+              </div>
+            </div>
+        </section>
+          
+          
+        
       </section>
     </section>
   );
