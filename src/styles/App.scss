@@ -303,8 +303,9 @@ main {
 
 .list-items{
   display: flex;
-  gap:30px;
+  gap:20px;
   padding-top:24px;
+  flex-wrap: wrap;
   li{
     position:relative;
     padding-left:25px;
