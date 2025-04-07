@@ -3,7 +3,7 @@ import React from 'react'
 const SubpageHeader = ({subTitle, mainTitle}) => {
   return (
     <div>
-        <section className="subpageHeader">
+        <div className="subpageHeader">
             <div className="blurFilter"></div>
             <div className='container'>
                  <div className="row">
@@ -13,7 +13,7 @@ const SubpageHeader = ({subTitle, mainTitle}) => {
                      </div>
                  </div>
             </div>
-        </section>
+        </div>
     </div>
   )
 }

@@ -55,7 +55,7 @@ const About = () => {
     },
   ];
   return (
-    <section className="subPage">
+    <main className="subPage" role="main">
       <SubpageHeader
         subTitle="Welcome to Core Web Pro"
         mainTitle="Create. Convert. Scale"
@@ -112,12 +112,9 @@ const About = () => {
                 ))}
               </div>
             </div>
-        </section>
-          
-          
-        
+        </section>    
       </section>
-    </section>
+    </main>
   );
 };
 
