@@ -4,13 +4,13 @@
 @use "./variables" as v;
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-body{
-    background: url('./assets/images/body-bg.png') repeat 0 0, linear-gradient(172deg, #0C003A 0.5%, #020009 100%);   
-    @include m.siteMain;
-    color:map.get(v.$colors, "white");
-    font-size: v.$fsize;
+body {
+  background: url("./assets/images/body-bg.png") repeat 0 0,
+    linear-gradient(172deg, #0c003a 0.5%, #020009 100%);
+  @include m.siteMain;
+  color: map.get(v.$colors, "white");
 
-    a {
+  a {
     text-decoration: none;
     cursor: pointer;
   }
@@ -35,6 +35,62 @@ body{
     @include m.respond-below(map.get(v.$breakpoints, "md")) {
       width: 95%;
     }
+  }
+
+  //buttons styles
+  .btnsimple{
+    padding:1rem 2rem;
+    font-size: v.$fsize - 3;
+    text-transform: uppercase;
+    font-weight: map.get(v.$font-weights, "medium");
+    color: map.get(v.$colors, "white");
+    @include m.transition(all, 0.5s, linear);   
+    display: inline-block;
+    border-radius:50px;
+    position: relative;
     
+  }
+
+  .bluebtn{
+    @extend .btnsimple;
+    background-color: map.get(v.$colors, "primary-color");
+    color:map.get(v.$colors, "white");
+
+    &:hover{
+        background-color:map.get(v.$colors, "dark-primary-color");
+        color:map.get(v.$colors, "white");
+    }
+  }
+
+  //header styles
+  header {
+    .nav-link{
+        text-transform: uppercase;
+        font-weight: map.get(v.$font-weights, "medium");    
+        color:map.get(v.$colors, "black");
+        padding:0.5rem 1rem!important;
+        font-size:v.$fsize - 5;
+    }
+    // Dropdown Menu on hover
+    .nav-item.dropdown:hover > .dropdown-menu,
+    .nav-item.dropdown:focus-within > .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu {
+      display: none;
+      border:none;
+    }
+    .dropdown-item{
+        padding:10px 20px;
+        font-size: v.$fsize - 5;
+        font-weight: map.get(v.$font-weights, "medium");   
+         @include m.transition(all, 0.5s, linear);   
+         
+         &:hover{
+            background-color:map.get(v.$colors, "secondary-color");
+            color:map.get(v.$colors, "black");
+         }
+    }
   }
 }
