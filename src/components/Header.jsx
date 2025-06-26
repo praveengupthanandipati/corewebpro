@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <>
-      <header className="mt-2">
-        <div className="custom-container">
+      <header className="bg-white fixed-top shadow-sm">
+        <div className="container">
           <nav
-            className="navbar navbar-expand-lg bg-white px-lg-5 py-lg-2 rounded-pill"
+            className="navbar navbar-expand-lg"
             aria-label="Offcanvas navbar large"
           >
             <Link to="/" className="navbar-brand" >

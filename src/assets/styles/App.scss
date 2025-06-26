@@ -2,6 +2,8 @@
 @use "sass:color";
 @use "./mixins" as m;
 @use "./variables" as v;
+@use "./header";
+@use "./Footer";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 body {
@@ -39,16 +41,14 @@ body {
 
   //buttons styles
   .btnsimple{
-    padding:1rem 2rem;
+    padding:0.8rem 1.6rem;
     font-size: v.$fsize - 3;
     text-transform: uppercase;
     font-weight: map.get(v.$font-weights, "medium");
     color: map.get(v.$colors, "white");
     @include m.transition(all, 0.5s, linear);   
-    display: inline-block;
-    border-radius:50px;
-    position: relative;
-    
+    display: inline-block;    
+    position: relative;    
   }
 
   .bluebtn{
@@ -62,35 +62,30 @@ body {
     }
   }
 
-  //header styles
-  header {
-    .nav-link{
-        text-transform: uppercase;
-        font-weight: map.get(v.$font-weights, "medium");    
-        color:map.get(v.$colors, "black");
-        padding:0.5rem 1rem!important;
-        font-size:v.$fsize - 5;
-    }
-    // Dropdown Menu on hover
-    .nav-item.dropdown:hover > .dropdown-menu,
-    .nav-item.dropdown:focus-within > .dropdown-menu {
-      display: block;
-    }
+  .orangebtn{
+    @extend .btnsimple;
+    background-color: map.get(v.$colors, "secondary-color");
+    color:map.get(v.$colors, "black");
 
-    .dropdown-menu {
-      display: none;
-      border:none;
+    &:hover{
+        background-color:map.get(v.$colors, "dark-secondary-color");
+        color:map.get(v.$colors, "black");
     }
-    .dropdown-item{
-        padding:10px 20px;
-        font-size: v.$fsize - 5;
-        font-weight: map.get(v.$font-weights, "medium");   
-         @include m.transition(all, 0.5s, linear);   
-         
-         &:hover{
-            background-color:map.get(v.$colors, "secondary-color");
-            color:map.get(v.$colors, "black");
-         }
+  }  
+}
+
+.Hero-Video-Section{
+  .Hero-Overlay{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #050019 100%);
+
+    h1{
+      font-size:clamp(2.5rem, 5.5vw, 5.5rem);
+      text-shadow: 0px 0px 10px rgba(0, 3, 2, 0.5);
+      letter-spacing: -1px;
+    }
+    p{
+      font-size:clamp(1.5rem, 2vw, 2rem);
+      margin-bottom:1.5rem;
     }
   }
 }
