@@ -1,10 +1,40 @@
-import React from 'react'
+import React, {useState, useEffect} from "react";
 import { Link } from 'react-router-dom'
 
 const Footer = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const scrollToTop =()=>{
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    })
+  };
+
+  // Show/hide button based on scroll position
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.pageYOffset > 200) {
+        setIsVisible(true);
+      } else {
+
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", toggleVisibility);
+
+    return () => {
+      window.removeEventListener("scroll", toggleVisibility);
+    };
+  }, []);
   return (
     <>
       <footer>
+        
+      {isVisible && (
+        <Link className="moveTop" onClick={scrollToTop}><i class="ri-arrow-up-double-line"></i></Link>
+      )}
+     
         <section className="top-footer">
           <div className="custom-container">
             <div className='row'>
