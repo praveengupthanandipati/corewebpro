@@ -59,8 +59,8 @@ const Home = () => {
 
         <section className="custom-container footer-intro pt-5 position-relative">
            <div className="blurFilter"></div>
-           <article>
-              <h2>Web Design & Development Agency in Hyderabad, Let’s work together</h2>
+           <article className="text-center">
+              <h2 className="text-center">Web Design & Development Agency in Hyderabad, Let’s work together</h2>
             
               <div className="row pt-4 mt-4">
                 <div className="col-md-4">

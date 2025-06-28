@@ -221,6 +221,7 @@ body {
     font-size: clamp(1.8rem, 3.5vw, 3.5rem);
     font-weight: map.get(v.$font-weights, "bold");
     line-height: 1.4;
+    text-align:center;
   }
   .desc {
     width: 85%;
