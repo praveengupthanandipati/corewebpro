@@ -3,6 +3,13 @@
 @use "./mixins" as m;
 //header styles
 header {
+  @include m.transition(all, 0.5s, ease);
+  .logo{
+    @include m.transition(all, 0.5s, ease);
+  }
+  .navbar{
+    @include m.transition(all, 0.5s, ease);
+  }
   .nav-link {
     text-transform: uppercase;
     font-weight: map.get(v.$font-weights, "medium");
@@ -24,11 +31,21 @@ header {
     padding: 10px 20px;
     font-size: v.$fsize - 5;
     font-weight: map.get(v.$font-weights, "medium");
-    @include m.transition(all, 0.5s, linear);
+    @include m.transition(all, 0.5s, ease);
 
     &:hover {
       background-color: map.get(v.$colors, "secondary-color");
       color: map.get(v.$colors, "black");
     }
+  }
+}
+
+.scrolledHeader{
+  @include m.transition(all, 0.5s, ease);
+  .logo{
+    width:100px;
+  }
+  .navbar{
+    padding:0;
   }
 }

@@ -1,17 +1,37 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "../assets/images/logo.svg";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  const [scrolled, setScrolled] = useState(false);
+  //scroll event to change header style on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <>
-      <header className="bg-white fixed-top shadow-sm">
+      <header
+        className={`bg-white fixed-top shadow-sm ${
+          scrolled ? "scrolledHeader" : ""
+        }`}
+      >
         <div className="container">
           <nav
             className="navbar navbar-expand-lg"
             aria-label="Offcanvas navbar large"
           >
-            <Link to="/" className="navbar-brand" >
+            <Link to="/" className="navbar-brand">
               <img src={Logo} alt="Logo" className="logo" />
             </Link>
             <button
@@ -75,12 +95,12 @@ const Header = () => {
                       </li>
                       <li>
                         <Link className="dropdown-item" to="/">
-                         Mobile Development
+                          Mobile Development
                         </Link>
                       </li>
-                       <li>
+                      <li>
                         <Link className="dropdown-item" to="/">
-                        Seo & Digital Marketing
+                          Seo & Digital Marketing
                         </Link>
                       </li>
                     </ul>
