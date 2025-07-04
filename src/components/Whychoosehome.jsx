@@ -74,7 +74,7 @@ const Whychoosehome = () => {
           <div className="p-8 position-relative">
             <article>
               <h4 className={`${slide.textColor} font-bold`}>{slide.title}</h4>
-              <div className="pt-4 d-flex">
+              <div className="pt-4 d-md-flex">
                 <h5 className={`${slide.textColor} pe-3`}>{slide.subtitle}</h5>
                 <p className={`${slide.textColor}`}>{slide.description}</p>
               </div>

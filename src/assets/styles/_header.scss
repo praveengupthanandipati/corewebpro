@@ -16,6 +16,14 @@ header {
     color: map.get(v.$colors, "black");
     padding: 0.5rem 1rem !important;
     font-size: v.$fsize - 5;
+
+    @include m.respond-below(map.get(v.$breakpoints, "md")){
+      color:map.get(v.$colors, "white");
+    }
+
+    &:hover{
+      color: map.get(v.$colors, "secondary-color");
+    }
   }
   // Dropdown Menu on hover
   .nav-item.dropdown:hover > .dropdown-menu,
@@ -42,6 +50,7 @@ header {
 
 .scrolledHeader{
   @include m.transition(all, 0.5s, ease);
+  padding:5px 0;
   .logo{
     width:100px;
   }

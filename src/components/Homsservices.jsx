@@ -91,12 +91,12 @@ const Homsservices = () => {
         <div className="row service-row" key={idx}>
           <div
             className={`col-md-9 col-sm-8${
-              idx % 2 === 1 ? " order-last ps-md-5" : ""
+              idx % 2 === 1 ? " order-md-last ps-md-5" : ""
             }`}
           >
             <article>
               <h2 className="font-semibold">{service.title}</h2>
-              <div className="service-labels">
+              <div className="service-labels d-none d-md-block">
                 {service.labels.map((label, i) => (
                   <span key={i}>{label}</span>
                 ))}

@@ -38,10 +38,10 @@ const Footer = () => {
         <section className="top-footer">
           <div className="custom-container">
             <div className='row'>
-              <div className='col-md-3'>
+              <div className='col-md-3 d-none d-md-block'>
                 <p className='text-start'>At Corewebpro, we bring together a diverse group of strategists, creatives, technology experts, and innovative thinkers. <Link to="/" className="text-decoration-underline text-black font-semibold">Read More</Link></p>
               </div>
-              <div className="col-md-3">
+              <div className="col-md-3 col-6">
                   <ul className="footer-links">
                     <li>
                       <Link to="/" className="text-black font-medium">Home</Link>
@@ -60,7 +60,7 @@ const Footer = () => {
                     </li>                   
                   </ul>
               </div>
-              <div className="col-md-3">
+              <div className="col-md-3 col-6">
                   <ul className="footer-links">
                     <li>
                       <Link to="/" className="text-black font-medium">UI/UX Design</Link>
