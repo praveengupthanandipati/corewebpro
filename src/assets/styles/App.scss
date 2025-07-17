@@ -167,6 +167,11 @@ body {
     min-height: 365px;
     border-radius: 25px;
 
+    @include m.respond-below(map.get(v.$breakpoints, "md")) {
+      padding: 25px;
+      min-height: 300px;
+    }
+
     article {
       width: 75%;
       @include m.respond-below(map.get(v.$breakpoints, "md")) {

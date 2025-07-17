@@ -42,7 +42,7 @@ const Footer = () => {
                 <p className='text-start'>At Corewebpro, we bring together a diverse group of strategists, creatives, technology experts, and innovative thinkers. <Link to="/" className="text-decoration-underline text-black font-semibold">Read More</Link></p>
               </div>
               <div className="col-md-3 col-6">
-                  <ul className="footer-links">
+                  <ul className="footer-links d-none d-md-block">
                     <li>
                       <Link to="/" className="text-black font-medium">Home</Link>
                     </li>
@@ -60,7 +60,7 @@ const Footer = () => {
                     </li>                   
                   </ul>
               </div>
-              <div className="col-md-3 col-6">
+              <div className="col-md-3 col-6 d-none d-md-block">
                   <ul className="footer-links">
                     <li>
                       <Link to="/" className="text-black font-medium">UI/UX Design</Link>
@@ -98,7 +98,7 @@ const Footer = () => {
 
         <section className='bottom-footer'>
            <div className="custom-container">
-             <p className='text-center'>Copyright © 2023 Corewebpro. All rights reserved.</p>
+             <p className='text-center'>Copyright © 2025 Corewebpro. All rights reserved.</p>
            </div>
         </section>
       </footer>
