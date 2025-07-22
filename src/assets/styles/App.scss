@@ -270,3 +270,101 @@ body {
     }
   }
 }
+
+
+.Subpage{
+  .subpage-header{   
+    padding: 11rem 0 10rem 0;
+
+    @include m.respond-below(map.get(v.$breakpoints, "md")) {
+      padding: 7rem 0 3rem 0;
+    }
+    h1{
+      font-size: clamp(1.2rem, 2.5vw, 2.5rem);  
+      font-weight: map.get(v.$font-weights, "semibold");
+    }
+    h2{
+      font-size: clamp(2.2rem, 7.5vw, 7.5rem);  
+      font-weight: map.get(v.$font-weights, "bold");
+      color:map.get(v.$colors, "secondary-color");      
+    }
+    p{
+      font-size: clamp(1rem, 2.2vw, 2.2rem);        
+    }
+  }
+  .subpage-content{
+    padding-bottom:10rem;
+    .roundedimg{
+      border-radius:1rem;
+    }
+    p{
+      font-size:clamp(0.9rem, 1.25vw, 1.25rem);
+    }
+    .section-title{
+      p{
+        font-size:clamp(0.9rem, 1.25vw, 1.25rem);        
+        margin-bottom:5px;
+      }
+      h3{
+        font-size:clamp(1.2rem, 2.2vw, 2.2rem);
+        color:map.get(v.$colors, "secondary-color");
+        letter-spacing: -2px;
+        font-weight:map.get(v.$font-weights, "semibold");
+      }
+    }
+  }
+  .section-row{
+    margin-top:8rem;
+    @include m.respond-below(map.get(v.$breakpoints, "md")) {
+      margin-top:2rem;
+    }
+
+    .section-content{
+      padding:4rem 3rem;
+      border:1px solid map.get(v.$colors, "black-90");
+      border-radius:1rem;
+      height: 100%;
+
+      @include m.respond-below(map.get(v.$breakpoints, "md")) {
+        padding: 2rem 1rem;
+        border-radius:1rem;
+        margin-top:2rem;
+        height: auto;
+      }
+      h3{
+        font-size:clamp(1.2rem, 2.2vw, 2.2rem);
+        color:map.get(v.$colors, "secondary-color");
+        letter-spacing: -2px;
+        font-weight:map.get(v.$font-weights, "semibold");
+      }
+      p{
+        font-size:clamp(0.9rem, 1.25vw, 1.25rem);
+      }
+    }
+  }
+  .list-items{
+    li{
+      font-size:clamp(0.9rem, 1.2vw, 1.2rem);
+      padding:0 0 1rem 2.5rem;
+      line-height: 2.2rem;    
+      position:relative;
+      @include m.respond-below(map.get(v.$breakpoints, "md")) {
+        line-height: 1.5rem;
+         padding:0 0 1rem 2.5rem;
+      }
+      &::before{
+        content:'';
+        width:15px;
+        height: 15px;
+        border-radius:3px;
+        background:map.get(v.$colors, "light-secondary-color");
+        position:absolute;
+        top:10px;
+        left:0;
+        @include m.respond-below(map.get(v.$breakpoints, "md")) {
+          top:6px;
+        }
+      }  
+    }
+  }
+}

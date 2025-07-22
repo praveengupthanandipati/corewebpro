@@ -36,7 +36,7 @@ footer {
     }
   }
   .bottom-footer {
-    background: darken(map.get(v.$colors, "secondary-color"), 10);
+    background: map.get(v.$colors, "dark-secondary-color");
     padding: 1rem 0;
     p {
       font-size: clamp(0.7rem, 0.8vw, 0.8rem);

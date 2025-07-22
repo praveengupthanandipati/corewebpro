@@ -1,5 +1,7 @@
 import React from "react";
+
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import HeroVideo from "../assets/videos/bgvideo.mp4";
 import Homeservices from "../components/Homsservices";
 import Whychoosehome from "../components/Whychoosehome";
@@ -9,6 +11,36 @@ const Home = () => {
   return (
     <>
       <main>
+        <Helmet>
+          <title>
+            Core Web Pro Studio | Award-Winning Web Design & Development
+            Agency in Hyderabad
+          </title>
+          <meta
+            name="description"
+            content="Core Web Pro Studio is an award-winning web design agency in Hyderabad, specializing in UI/UX design, web development, SEO, digital marketing, and mobile apps. Elevate your brand with stunning, high-performance websites."
+          />
+          <meta
+            name="keywords"
+            content="Web Design, Web Development, UI/UX, SEO, Digital Marketing, Mobile Apps, Hyderabad, Core Web Pro Studio, Branding, Agency"
+          />
+          <meta name="author" content="Core Web Pro Studio" />
+          <meta name="robots" content="index, follow" />
+          <meta
+            property="og:title"
+            content="Core Web Pro Studio | Award-Winning Web Design & Development Agency in Hyderabad"
+          />
+          <meta
+            property="og:description"
+            content="Elevate your brand with stunning, high-performance websites from Core Web Pro Studio, Hyderabad's leading web design and development agency."
+          />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://corewebpro.com/" />
+          <meta
+            property="og:image"
+            content="https://corewebpro.com/assets/images/logo.svg"
+          />
+        </Helmet>
         <section className="Hero-Video-Section position-relative">
           <div className="Hero-Video-Container">
             <video
@@ -58,28 +90,32 @@ const Home = () => {
         </section>
 
         <section className="custom-container footer-intro pt-5 position-relative">
-           <div className="blurFilter"></div>
-           <article className="text-center">
-              <h2 className="text-center">Web Design & Development Agency in Hyderabad, Let’s work together</h2>
-            
-              <div className="row pt-4 mt-4">
-                <div className="col-md-4">
-                   <div class="item text-center">
-                      <Link to="mailto:info@corewebpro.com">info@corewebpro.com</Link>
-                   </div>
-                </div>
-                 <div className="col-md-4">
-                   <div class="item text-center">
-                      <Link to="phone:+91  779 997 1112">+91  779 997 1112</Link>
-                   </div>
-                </div>
-                 <div className="col-md-4">
-                   <div class="item text-center">
-                      <Link to="/">Hyderabad, India</Link>
-                   </div>
+          <div className="blurFilter"></div>
+          <article className="text-center">
+            <h2 className="text-center">
+              Web Design & Development Agency in Hyderabad, Let’s work together
+            </h2>
+
+            <div className="row pt-4 mt-4">
+              <div className="col-md-4">
+                <div class="item text-center">
+                  <Link to="mailto:info@corewebpro.com">
+                    info@corewebpro.com
+                  </Link>
                 </div>
               </div>
-           </article>
+              <div className="col-md-4">
+                <div class="item text-center">
+                  <Link to="phone:+91  779 997 1112">+91 779 997 1112</Link>
+                </div>
+              </div>
+              <div className="col-md-4">
+                <div class="item text-center">
+                  <Link to="/">Hyderabad, India</Link>
+                </div>
+              </div>
+            </div>
+          </article>
         </section>
       </main>
     </>

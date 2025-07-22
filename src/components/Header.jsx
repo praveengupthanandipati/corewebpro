@@ -1,9 +1,25 @@
 import React, { useState, useEffect } from "react";
 import Logo from "../assets/images/logo.svg";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
+   const location = useLocation();
+
+  // Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+
   //scroll event to change header style on scroll
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +35,8 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  
   return (
     <>
       <header
@@ -51,7 +69,7 @@ const Header = () => {
             >
               <div className="offcanvas-header">
                 <h5 className="offcanvas-title" id="offcanvasNavbar2Label">
-                  Offcanvas
+                  Core Web Pro
                 </h5>
                 <button
                   type="button"
@@ -68,7 +86,7 @@ const Header = () => {
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/">
+                    <Link className="nav-link" to="/About">
                       About
                     </Link>
                   </li>
