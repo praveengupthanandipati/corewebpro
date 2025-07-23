@@ -5,6 +5,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import ErrorPage from "./pages/ErrorPage";
+import UIUXDesigning from "./pages/UIUXDesigning";
 import loadingImg from "./assets/images/Loadinganimation.gif";
 
 function App() {
@@ -45,7 +47,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/uiuxdesigning" element={<UIUXDesigning />} />
             {/* Add more routes as needed */}
+            <Route path="*" element={<ErrorPage />} />
+         
           </Routes>
           <Footer />
         </Router>

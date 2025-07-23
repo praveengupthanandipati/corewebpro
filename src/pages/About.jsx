@@ -56,13 +56,17 @@ const meetteam = [
   "Client-First Mentality: We collaborate closely with you, ensuring your vision drives every decision.",
 ];
 
+const pagesubtitle="Welcome to Corewebpro";
+const pagetitle="Crafting Digital Excellence";
+const pagedescription="Since 2000, Corewebpro has been at the forefront of digital innovation, delivering tailored solutions in UI/UX design, web development, SEO, digital marketing, and mobile apps.";
+
 const About = () => {
   return (
     <>
       <main className="Subpage">
         <Helmet>
           <title>
-            About Core Web Pro Studio - Digital Excellence in Hyderabad
+           {pagesubtitle}
           </title>
           <meta
             name="description"
@@ -91,13 +95,9 @@ const About = () => {
         </Helmet>
         <section className="subpage-header">
           <div className="custom-container">
-            <h1>Welcome to Corewebpro</h1>
-            <h2>Crafting Digital Excellence</h2>
-            <p>
-              Since 2000, Corewebpro has been at the forefront of digital
-              innovation, delivering tailored solutions in UI/UX design, web
-              development, SEO, digital marketing, and mobile apps.
-            </p>
+            <h1>{pagesubtitle}</h1>
+            <h2>{pagetitle}</h2>
+            <p>{pagedescription}</p>
           </div>
         </section>
         <section className="subpage-content">
